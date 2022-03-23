@@ -1,0 +1,27 @@
+{
+  "name": "api-controle-financeiro",
+  "version": "1.0.0",
+  "description": "API REST para sistema de controle financeiro familiar.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WalterSopraniJr/API-REST-controle-orcamento-familiar.git"
+  },
+  "author": "Walter Soprani Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WalterSopraniJr/API-REST-controle-orcamento-familiar/issues"
+  },
+  "homepage": "https://github.com/WalterSopraniJr/API-REST-controle-orcamento-familiar#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
