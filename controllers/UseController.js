@@ -1,4 +1,6 @@
+require('dotenv').config()
 const connection = require('../database/connection')
+// console.log(connection)
 
 const responseModel = {
     success: false,
@@ -8,7 +10,7 @@ const responseModel = {
 
 module.exports = {
 
-    async create(request, response) {
+    async create(request, res) {
         const response = {...responseModel};
 
         const { username, password} = request.body;
@@ -19,20 +21,20 @@ module.exports = {
 
         response.success = affectRows > 0
 
-        return response.json(response);
+        return res.json(response);
     },
     
-    async login(request, response) {
+    async login(request, res) {
         const response = {...responseModel};
 
         const {username, password} = request.body
 
         const [, data] = await connection.query(`
-            SELECT * FROM users WHERE username='${username}' AND passwords='${password}'
+            SELECT * FROM users WHERE username='${username}' AND password='${password}'
         `)
 
-        console.log(data)
+        response.success = data.length > 0
 
-        return response.json(response);
+        return res.json(data);
     }
 }

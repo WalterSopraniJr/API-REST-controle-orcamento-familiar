@@ -15,18 +15,18 @@ module.exports = {
       autoIncrement: true 
     },
     username: {
-      type: Sequelize.VARCHAR(150)
+      type: Sequelize.TEXT
 
     },
     password: {
-      type: Sequelize.VARCHAR(150)
+      type: Sequelize.TEXT
     },
     created_at: {
       type: Sequelize.DATE
 
     },
     updated_at: {
-
+      type: Sequelize.DATE
     }
   })
   },
